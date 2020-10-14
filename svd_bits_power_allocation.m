@@ -26,7 +26,7 @@ for temp1 = 1: length(SNR)
         sigma = sqrt(0.5/snr_linear);
         noise = sigma*(randn(2,num_sym)+1j*(randn(2,num_sym)));
         
-        H = (rand(2,2)+1j * randn(2,2))/sqrt(2);
+        H = (randn(2,2)+1j * randn(2,2))/sqrt(2);
         [U,S,V] = svd(H);
         precoder=V;
         shaping=U';
